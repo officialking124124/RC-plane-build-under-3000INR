@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.data/
+fixtures/
+.pnpm-store/
+__pycache__/
+.env
+.env.local
+.env*.local
+*.tsbuildinfo
+.DS_Store

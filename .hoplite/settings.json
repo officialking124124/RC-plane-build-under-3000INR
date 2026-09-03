@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "ports": {"preview": 3000, "additional": {}},
+  "scripts": {
+    "setup": {
+      "enabled": true,
+      "command": "pnpm install && (python3 -m pip install --quiet pillow piexif || python3 -m pip install --quiet --break-system-packages pillow piexif || true) && (python3 scripts/make_fixtures.py || true) && pnpm exec tsc --noEmit && pnpm exec vitest run"
+    },
+    "run": {
+      "enabled": true,
+      "command": "pnpm install && NODE_OPTIONS=--max-old-space-size=2048 pnpm dev"
+    },
+    "archive": {"enabled": true, "command": null},
+    "check": {
+      "enabled": true,
+      "command": "pnpm exec tsc --noEmit && pnpm exec vitest run"
+    }
+  },
+  "mcpServers": []
+}
